@@ -103,6 +103,11 @@ export default {
       // TODO Say hello again
       //  Ca va olivier?
       //  labels: enhancement, help wanted
+    } ,
+    helloAgainForReal() {
+      // TODO Say hello again for real
+      //  Ca va olivier?
+      //  labels: enhancement, help wanted
     } 
   }
 }
