@@ -96,8 +96,13 @@ export default {
   methods: {
     hello() {
       // TODO Say hello
-      // Ca va olivier?
-      // labels: enhancement, help wanted
+      //  Ca va olivier?
+      //  labels: enhancement, help wanted
+    },
+    helloAgain() {
+      // TODO Say hello again
+      //  Ca va olivier?
+      //  labels: enhancement, help wanted
     } 
   }
 }
