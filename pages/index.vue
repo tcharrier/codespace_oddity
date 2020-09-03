@@ -92,6 +92,13 @@ export default {
   components: {
     Logo,
     VuetifyLogo
+  },
+  methods: {
+    hello() {
+      // TODO Say hello
+      // Ca va olivier?
+      // labels: enhancement, help wanted
+    } 
   }
 }
 </script>
