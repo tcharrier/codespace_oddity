@@ -7,10 +7,9 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "Launch Server",
-            "program": "${workspaceFolder}/test-project/server.js",
-            "cwd": "${workspaceFolder}/test-project",
-            "preLaunchTask": "npm: install - test-project"
+            "name": "Launch Dev Server",
+            "program": "npm run dev",
+            "preLaunchTask": "npm: install"
         }
     ]
 }
