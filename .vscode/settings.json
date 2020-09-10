@@ -1,8 +1,2 @@
 {
-    "eslint.workingDirectories": [
-        {
-            "directory": "./test-project",
-            "changeProcessCWD": true
-        }
-    ]
 }
