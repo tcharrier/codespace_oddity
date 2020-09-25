@@ -94,21 +94,11 @@ export default {
     VuetifyLogo
   },
   methods: {
-    hello() {
-      // TODO Say hello
-      //  Ca va olivier?
+    helloThisIsTheLast() {
+      // TODO Hello Tiffany
+      //  Ca va Tiffany?
       //  labels: enhancement, help wanted
-    },
-    helloAgain() {
-      // TODO Say hello again
-      //  Ca va olivier?
-      //  labels: enhancement, help wanted
-    } ,
-    helloAgainForReal() {
-      // TODO Say hello again for real
-      //  Ca va olivier?
-      //  labels: enhancement, help wanted
-    } 
+    }
   }
 }
 </script>
