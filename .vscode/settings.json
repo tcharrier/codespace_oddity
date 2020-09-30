@@ -1,5 +1,4 @@
 {
   "mdb.connectionSaving.defaultConnectionSavingLocation": "Workspace",
-  "mdb.connectionSaving.hideOptionToChooseWhereToSaveNewConnections": false,
   "workbench.colorTheme": "Monokai"
 }
