@@ -22,7 +22,10 @@
 	"forwardPorts": [3000, 27017],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "npm install",
+	"postCreateCommand": [
+		"npm install",
+		"mongoimport --db mydb --collection songs --type=csv --file test/data/bowie.csv --headerline"
+	],
 
 	// Uncomment to connect as a non-root user. See https://aka.ms/vscode-remote/containers/non-root.
 	"remoteUser": "node"
