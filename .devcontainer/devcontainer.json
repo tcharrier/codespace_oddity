@@ -23,7 +23,6 @@
 
 	// Use 'postCreateCommand' to run commands after the container is created.
 	"postCreateCommand": [
-		"npm install",
 		"mongoimport --db mydb --collection songs --type=csv --file /home/node/workspace/codespace_oddity/test/data/bowie.csv --headerline"
 	],
 
