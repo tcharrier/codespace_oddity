@@ -23,8 +23,7 @@
 
 	// Use 'postCreateCommand' to run commands after the container is created.
 	"postCreateCommand": [
-		"mongoimport --db mydb --collection songs --type=csv --file /home/node/workspace/codespace_oddity/test/data/bowie.csv --headerline", 
-		"npm install"
+		"npm install && mongoimport --db mydb --collection songs --type=csv --file /home/node/workspace/codespace_oddity/test/data/bowie.csv --headerline"
 	],
 
 	// Uncomment to connect as a non-root user. See https://aka.ms/vscode-remote/containers/non-root.
