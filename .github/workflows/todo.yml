@@ -1,4 +1,4 @@
-name: "Workflow"
+name: "Todo"
 on: ["push"]
 jobs:
   build:
