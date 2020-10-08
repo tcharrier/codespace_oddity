@@ -95,9 +95,10 @@ export default {
   },
   methods: {
     helloThisIsTheLast() {
-      // TODO Hello Tiffany
-      //  Ca va Tiffany?
+      // TODO Retrieve data from database
+      //  with request like db.songs.find().limit(10), thanks
       //  labels: enhancement, help wanted
+      
     }
   }
 }
