@@ -37,7 +37,7 @@ $ npm run dev
 ## Build Setup - Option 2
 - Create a new Codespace
 - Click the run button
-- Start coding
+- Start coding now
 
 ## build for production and launch server
 ```bash
