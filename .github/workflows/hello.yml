@@ -14,9 +14,9 @@ jobs:
     - name: Load the environment
       uses: xom9ikk/dotenv@v1
       with:
-        folder: .github/workflows 
+        path: .github/workflows 
         mode: development
-        
+
     - name: Say something nice
       run: |
         echo "Hello ${{ env.MSG }}"
