@@ -11,6 +11,9 @@ jobs:
   greeting:
     runs-on: ubuntu-latest
     steps:
+    - name: Get the repo
+      uses: actions/checkout@v2
+      
     - name: Load the environment
       uses: xom9ikk/dotenv@v1
       with:
