@@ -9,16 +9,16 @@ on:
 
 jobs:
   greeting:
-
-  strategy:
-    fail-fast: true
-    matrix: 
-      env: [
-        { name: 'development' },
-        { name: 'production' }
-      ]
-
     runs-on: ubuntu-latest
+    
+    strategy:
+      fail-fast: true
+      matrix: 
+        env: [
+          { name: 'development' },
+          { name: 'production' }
+        ]
+
     steps:
     - name: Get the repo
       uses: actions/checkout@v2
