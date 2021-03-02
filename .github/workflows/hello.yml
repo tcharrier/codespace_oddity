@@ -18,7 +18,10 @@ jobs:
           { name: 'development' },
           { name: 'production' }
         ]
-
+    
+    environment: 
+      name: ${{ matrix.env.name }}
+      
     steps:
     - name: Get the repo
       uses: actions/checkout@v2
