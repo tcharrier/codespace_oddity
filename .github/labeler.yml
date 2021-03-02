@@ -1,0 +1,9 @@
+front:
+  - pages/**/*
+
+test: 
+  - test/**/*
+
+workflow:
+  - .github/**/*
+  - .devcontainer/**/*
