@@ -129,7 +129,7 @@ jobs:
     - name: Trigger something
       uses: actions/github-script@v3
       with:
-        github-token: ${{ secrets.GITHUB_TOKEN }}
+        github-token: ${{ secrets.PAT }}
         script: |
           github.repos.createDispatchEvent(
             {
