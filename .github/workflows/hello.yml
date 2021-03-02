@@ -16,6 +16,7 @@ jobs:
       matrix: 
         env: [
           { name: 'development' },
+          { name: 'staging' },
           { name: 'production' }
         ]
     
@@ -33,4 +34,4 @@ jobs:
 
     - name: Say something nice
       run: |
-        echo "Hello ${{ env.MSG }}"
+        echo "Hello ${{ env.MSG }}. ${{ secrets.SECRET_MESSAGE }}"
