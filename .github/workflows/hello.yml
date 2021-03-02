@@ -34,4 +34,14 @@ jobs:
 
     - name: Say something nice
       run: |
-        echo "Hello ${{ env.MSG }}. ${{ secrets.SECRET_MESSAGE }}"
+        echo "::group::My messages in a group"
+        echo "Hello ${{ env.MSG }}. Here's a secret ${{ secrets.SECRET_MESSAGE }}"
+        echo "::endgroup::"
+        echo "::set-output ${{ env.MSG }}"
+        echo "::warning ${{ env.MSG }}"
+
+    - name: Share something nice
+      run: |
+        echo "::set-output name=${{ matrix.env.name }}::${{ env.MSG }}"
+        
+
