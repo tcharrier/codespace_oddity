@@ -28,7 +28,7 @@ jobs:
     needs: hello
     runs-on: ubuntu-latest
     container:
-      image: 12.21.0-stretch
+      image: node:12.21.0-stretch
       env:
         NODE_ENV: development
     steps:
