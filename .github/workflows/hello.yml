@@ -52,7 +52,7 @@ jobs:
     needs: 
       - greeting
     steps:
-      - name: Share something nice
+    - name: Retrieve something nice
       run: |
         echo "${{ needs.greeting.outputs.message }}"
    
