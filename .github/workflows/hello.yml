@@ -37,11 +37,18 @@ jobs:
         echo "::group::My messages in a group"
         echo "Hello ${{ env.MSG }}. Here's a secret ${{ secrets.SECRET_MESSAGE }}"
         echo "::endgroup::"
-        echo "::set-output ${{ env.MSG }}"
-        echo "::warning ${{ env.MSG }}"
+        echo "::warning ::${{ env.MSG }}"
 
     - name: Share something nice
       run: |
         echo "::set-output name=${{ matrix.env.name }}::${{ env.MSG }}"
-        
-
+   
+  goodbye:
+    runs-on: ubuntu-latest
+    needs: 
+      - greeting  
+    steps:
+      - name: Share something nice
+      run: |
+        echo "${{ needs.greeting.production }}"
+   
