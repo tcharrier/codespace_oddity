@@ -13,11 +13,11 @@ jobs:
     steps:
     - name: Get the repo
       uses: actions/checkout@v2
-      
+
     - name: Load the environment
       uses: xom9ikk/dotenv@v1
       with:
-        path: .github/workflows 
+        path: ./.github/workflows 
         mode: development
 
     - name: Say something nice
