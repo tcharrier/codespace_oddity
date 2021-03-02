@@ -2,17 +2,31 @@ name: Hello
 
 on: 
   workflow_dispatch:
+    inputs:
+      name:
+        description: 'Person to greet'
+        required: true
+        default: 'Mona the Octocat'
   push:
     branches: [ master ]
   pull_request:
     branches: [ master ]
 
 jobs:
+  hello:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Say hello
+      run: |
+        echo "Hello $${github.event.inputs.name}}"
+        
   greeting:
     runs-on: ubuntu-latest
     
     outputs:
-      message: ${{ steps.share.outputs.message }}
+      production_message: ${{ steps.share.outputs.production_message }}
+      development_message: ${{ steps.share.outputs.development_message }}
+      staging_message: ${{ steps.share.outputs.staging_message }}
 
     strategy:
       fail-fast: true
@@ -38,14 +52,14 @@ jobs:
     - name: Say something nice
       run: |
         echo "::group::My messages in a group"
-        echo "Hello ${{ env.MSG }}. Here's a secret ${{ secrets.SECRET_MESSAGE }}"
+        echo "Hello ${{ env.MSG }} from $${github.event.inputs.name}}. Here's a secret ${{ secrets.SECRET_MESSAGE }}"
         echo "::endgroup::"
         echo "::warning ::${{ env.MSG }}"
 
     - name: Share something nice
       id: share
       run: |
-        echo "::set-output name=message::${{ env.MSG }}"
+        echo "::set-output name=${{ matrix.env.name }}_message::${{ env.MSG }}"
    
   goodbye:
     runs-on: ubuntu-latest
@@ -54,5 +68,5 @@ jobs:
     steps:
     - name: Retrieve something nice
       run: |
-        echo "${{ needs.greeting.outputs.message }}"
+        echo "${{ needs.greeting.outputs.production_message }}"
    
