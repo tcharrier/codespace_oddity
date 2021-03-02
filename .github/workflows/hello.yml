@@ -1,0 +1,22 @@
+name: Hello
+
+on: 
+  workflow_dispatch:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  greeting:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Load the environment
+      uses: xom9ikk/dotenv@v1
+      with:
+        path: .github/workflows 
+        mode: development
+
+    - name: Say something nice
+      run: |
+        echo "Hello ${{ env.MSG }}"
