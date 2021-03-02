@@ -33,7 +33,7 @@ jobs:
         NODE_ENV: development
     steps:
       - uses: actions/checkout@v2
-      - run: npm ci
+      - run: npm install
       - run: npm run build --if-present
       # - run: npm test
         
@@ -47,7 +47,7 @@ jobs:
         with:
           node-version: 12.x
       - uses: actions/checkout@v2
-      - run: npm ci
+      - run: npm install
       - run: npm run build --if-present
       - run: npm test
 
@@ -67,7 +67,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-
       - uses: actions/checkout@v2
-      - run: npm ci
+      - run: npm install
       - run: npm run build --if-present
       - run: npm test
         
